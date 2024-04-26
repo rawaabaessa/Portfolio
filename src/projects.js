@@ -10,12 +10,14 @@ import vegan from "./assets/img/veganlife.png";
 import foodi from "./assets/img/foodi.png";
 import sonrisa from "./assets/img/sonrisa.png";
 import porfolio from "./assets/img/porfolio.png";
+import todolist from "./assets/img/todolist.png";
 
 export const projects = [
   {
     title: "Nafas App",
     category: "ui/ux",
     imgUrl: projImg7,
+    fullImage: projImg7,
     urls: [
       {
         id: 1,
@@ -29,13 +31,13 @@ export const projects = [
     title: "Qaah Platform",
     category: "web",
     imgUrl: projImg2,
+    fullImage: qaah,
     urls: [
       {
         id: 1,
         weburl: "#",
         githuburl:
           "https://github.com/rawaabaessa/bootcamp-final-project-qaah-platform",
-        fullImage: qaah,
       },
     ],
     skills: [
@@ -51,12 +53,12 @@ export const projects = [
     title: "My Portfolio",
     category: "web",
     imgUrl: projImg6,
+    fullImage: porfolio,
     urls: [
       {
         id: 1,
         weburl: "http://veganlife.42web.io/index.php",
         githuburl: "https://github.com/rawaabaessa/Portfolio",
-        fullImage: porfolio,
       },
     ],
     skills: [
@@ -70,13 +72,13 @@ export const projects = [
     title: "Vegan Life Blog",
     category: "web",
     imgUrl: projImg1,
+    fullImage: vegan,
     urls: [
       {
         id: 1,
         weburl: "http://veganlife.42web.io/index.php",
         githuburl:
           "https://github.com/rawaabaessa/mini-project-vegetarian-blog",
-        fullImage: vegan,
       },
     ],
     skills: [
@@ -91,12 +93,12 @@ export const projects = [
     title: "Foodi Website",
     category: "web",
     imgUrl: projImg3,
+    fullImage: foodi,
     urls: [
       {
         id: 1,
         weburl: "https://rawaabaessa.github.io/foodi/",
         githuburl: "https://github.com/rawaabaessa/foodi",
-        fullImage: foodi,
       },
     ],
     skills: [
@@ -109,12 +111,12 @@ export const projects = [
     title: "Sonrisa Website",
     category: "web",
     imgUrl: projImg4,
+    fullImage: sonrisa,
     urls: [
       {
         id: 1,
         weburl: "https://rawaabaessa.github.io/sonrisa/",
         githuburl: "https://github.com/rawaabaessa/sonrisa",
-        fullImage: sonrisa,
       },
     ],
     skills: [
@@ -127,6 +129,7 @@ export const projects = [
     title: "To Do List",
     category: "web",
     imgUrl: projImg5,
+    fullImage: todolist,
     urls: [
       {
         id: 1,

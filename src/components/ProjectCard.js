@@ -1,13 +1,24 @@
 import { Col, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 
-export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
+export const ProjectCard = ({
+  title,
+  description,
+  imgUrl,
+  urls,
+  skills,
+  fullImage,
+}) => {
   return (
     <Col size={12} sm={6} md={6}>
       <div className="proj-imgbx">
         <img src={imgUrl} alt="" className="project-image" />
         <div className="proj-txtx">
-          <a href={urls.fullImge} target="_blank">
+          <a
+            href={fullImage}
+            target="_blank"
+            style={{ color: "white", textDecoration: "none" }}
+          >
             <h4 className={"mb-3"}>{title}</h4>
           </a>
 
