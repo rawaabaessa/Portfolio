@@ -5,6 +5,11 @@ import projImg4 from "./assets/img/Frame 5.svg";
 import projImg5 from "./assets/img/Frame 6.svg";
 import projImg6 from "./assets/img/Frame 7.svg";
 import projImg7 from "./assets/img/Frame 3.svg";
+import qaah from "./assets/img/qaah.png";
+import vegan from "./assets/img/veganlife.png";
+import foodi from "./assets/img/foodi.png";
+import sonrisa from "./assets/img/sonrisa.png";
+import porfolio from "./assets/img/porfolio.png";
 
 export const projects = [
   {
@@ -30,6 +35,7 @@ export const projects = [
         weburl: "#",
         githuburl:
           "https://github.com/rawaabaessa/bootcamp-final-project-qaah-platform",
+        fullImage: qaah,
       },
     ],
     skills: [
@@ -50,6 +56,7 @@ export const projects = [
         id: 1,
         weburl: "http://veganlife.42web.io/index.php",
         githuburl: "https://github.com/rawaabaessa/Portfolio",
+        fullImage: porfolio,
       },
     ],
     skills: [
@@ -69,6 +76,7 @@ export const projects = [
         weburl: "http://veganlife.42web.io/index.php",
         githuburl:
           "https://github.com/rawaabaessa/mini-project-vegetarian-blog",
+        fullImage: vegan,
       },
     ],
     skills: [
@@ -88,6 +96,7 @@ export const projects = [
         id: 1,
         weburl: "https://rawaabaessa.github.io/foodi/",
         githuburl: "https://github.com/rawaabaessa/foodi",
+        fullImage: foodi,
       },
     ],
     skills: [
@@ -105,6 +114,7 @@ export const projects = [
         id: 1,
         weburl: "https://rawaabaessa.github.io/sonrisa/",
         githuburl: "https://github.com/rawaabaessa/sonrisa",
+        fullImage: sonrisa,
       },
     ],
     skills: [

@@ -7,7 +7,10 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
       <div className="proj-imgbx">
         <img src={imgUrl} alt="" className="project-image" />
         <div className="proj-txtx">
-          <h4 className={"mb-3"}>{title}</h4>
+          <a href={urls.fullImge} target="_blank">
+            <h4 className={"mb-3"}>{title}</h4>
+          </a>
+
           {/* <span>{description}</span> */}
           {/* <a href={webUrl}><i></i></a> */}
           <Row className="gy-3 justify-content-center">

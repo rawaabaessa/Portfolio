@@ -56,6 +56,7 @@ export const Banner = () => {
     const fileName = CVFileURL.split("/").pop();
     const aTag = document.createElement("a");
     aTag.href = CVFileURL;
+    aTag.target = "_blank";
     aTag.setAttribute("download", fileName);
     document.body.appendChild(aTag);
     aTag.click();
