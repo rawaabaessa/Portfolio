@@ -88,10 +88,16 @@ export const Banner = () => {
 
                   <button
                     onClick={() => {
-                      DownloadMyCv(CVFileURL);
+                      //DownloadMyCv(CVFileURL);
                     }}
                   >
-                    Download My Cv <ArrowRightCircle size={25} />
+                    <a
+                      href="CV.pdf"
+                      download
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Download My Cv <ArrowRightCircle size={25} />
+                    </a>
                   </button>
                 </div>
               )}
