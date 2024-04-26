@@ -28,19 +28,25 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
           {urls.map((url) => {
             return (
               <div className="project-link-div mt-4">
-                {url.weburl != "#" ? (
-                  <a className="project-link" href={url.weburl} target="_blank">
+                {url.weburl !== "#" ? (
+                  <a
+                    className="project-link"
+                    href={url.weburl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     Visit Website{" "}
                     <ArrowRightCircle size={25} className="ms-1" />
                   </a>
                 ) : (
                   ""
                 )}
-                {url.githuburl != "#" ? (
+                {url.githuburl !== "#" ? (
                   <a
                     className="project-link"
                     href={url.githuburl}
                     target="_blank"
+                    rel="noreferrer"
                     style={{ display: "flex", alignItems: "center" }}
                   >
                     View Code <i class="fa-brands fa-github ms-2"></i>

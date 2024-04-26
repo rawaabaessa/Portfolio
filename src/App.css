@@ -354,7 +354,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-icon:hover {
   background: -webkit-linear-gradient(#37236b, #60285b);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: translateY(-5px);
 }
@@ -396,7 +396,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-icon:hover {
   background: -webkit-linear-gradient(#37236b, #60285b);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: translateY(-5px);
 }
