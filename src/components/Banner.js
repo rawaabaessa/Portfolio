@@ -6,7 +6,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
-  let CVFileURL = "http://rawaaba.netlify.app/CV.pdf";
+  const CVFileURL = "http://rawaaba.netlify.app/CV.pdf";
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -56,7 +56,6 @@ export const Banner = () => {
     const fileName = CVFileURL.split("/").pop();
     const aTag = document.createElement("a");
     aTag.href = CVFileURL;
-    aTag.target = "_blank";
     aTag.setAttribute("download", fileName);
     document.body.appendChild(aTag);
     aTag.click();

@@ -18,10 +18,9 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
               return (
                 <Col xs={4} sm={4} md={4}>
                   <i
-                    style={{ fontSize: "50px" }}
                     key={skill.id}
                     title={skill.title}
-                    className={skill.name}
+                    className={`project-skills ${skill.name}`}
                   ></i>{" "}
                 </Col>
               );
@@ -30,7 +29,7 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
 
           {urls.map((url) => {
             return (
-              <div className="project-link-div mt-4">
+              <div className="project-link-div">
                 {url.weburl !== "#" ? (
                   <a
                     className="project-link"
@@ -39,7 +38,7 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
                     target="_blank"
                   >
                     Visit Website{" "}
-                    <ArrowRightCircle size={25} className="ms-1" />
+                    <ArrowRightCircle className="ms-1 arrow" size={25} />
                   </a>
                 ) : (
                   ""
