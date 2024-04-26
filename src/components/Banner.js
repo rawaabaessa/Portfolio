@@ -6,7 +6,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
-  let CVFileURL = "http://localhost:3000/Rawaa Baessa (5).pdf";
+  let CVFileURL = "http://localhost:3000/CV.pdf";
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");

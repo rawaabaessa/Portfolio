@@ -7,13 +7,13 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
       <div className="proj-imgbx">
         <img src={imgUrl} alt="" className="project-image" />
         <div className="proj-txtx">
-          <h4 className="mb-3">{title}</h4>
+          <h4 className={"mb-3"}>{title}</h4>
           {/* <span>{description}</span> */}
           {/* <a href={webUrl}><i></i></a> */}
           <Row className="gy-3">
             {skills.map((skill) => {
               return (
-                <Col xs={12} sm={6} md={4}>
+                <Col xs={4} sm={4} md={4}>
                   <i
                     style={{ fontSize: "50px" }}
                     key={skill.id}
