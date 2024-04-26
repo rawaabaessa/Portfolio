@@ -4,15 +4,30 @@ import projImg3 from "./assets/img/Frame 4.svg";
 import projImg4 from "./assets/img/Frame 5.svg";
 import projImg5 from "./assets/img/Frame 6.svg";
 import projImg6 from "./assets/img/Frame 7.svg";
+import projImg7 from "./assets/img/Frame 3.svg";
 
 export const projects = [
   {
+    title: "Nafas App",
+    category: "ui/ux",
+    imgUrl: projImg7,
+    urls: [
+      {
+        id: 1,
+        weburl: "#",
+        githuburl: "#",
+      },
+    ],
+    skills: [{ id: 9, name: "fa-brands fa-figma", title: "Figma" }],
+  },
+  {
     title: "Qaah Platform",
+    category: "web",
     imgUrl: projImg2,
     urls: [
       {
         id: 1,
-        weburl: "http://veganlife.42web.io/index.php",
+        weburl: "#",
         githuburl:
           "https://github.com/rawaabaessa/bootcamp-final-project-qaah-platform",
       },
@@ -28,6 +43,7 @@ export const projects = [
   },
   {
     title: "My Portfolio",
+    category: "web",
     imgUrl: projImg6,
     urls: [
       {
@@ -45,6 +61,7 @@ export const projects = [
   },
   {
     title: "Vegan Life Blog",
+    category: "web",
     imgUrl: projImg1,
     urls: [
       {
@@ -64,6 +81,7 @@ export const projects = [
   },
   {
     title: "Foodi Website",
+    category: "web",
     imgUrl: projImg3,
     urls: [
       {
@@ -80,6 +98,7 @@ export const projects = [
   },
   {
     title: "Sonrisa Website",
+    category: "web",
     imgUrl: projImg4,
     urls: [
       {
@@ -96,6 +115,7 @@ export const projects = [
   },
   {
     title: "To Do List",
+    category: "web",
     imgUrl: projImg5,
     urls: [
       {

@@ -10,7 +10,7 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
           <h4 className={"mb-3"}>{title}</h4>
           {/* <span>{description}</span> */}
           {/* <a href={webUrl}><i></i></a> */}
-          <Row className="gy-3">
+          <Row className="gy-3 justify-content-center">
             {skills.map((skill) => {
               return (
                 <Col xs={4} sm={4} md={4}>
@@ -28,18 +28,26 @@ export const ProjectCard = ({ title, description, imgUrl, urls, skills }) => {
           {urls.map((url) => {
             return (
               <div className="project-link-div mt-4">
-                {" "}
-                <a className="project-link" href={url.weburl} target="_blank">
-                  Visit Website <ArrowRightCircle size={25} className="ms-1" />
-                </a>
-                <a
-                  className="project-link"
-                  href={url.githuburl}
-                  target="_blank"
-                  style={{ display: "flex", alignItems: "center" }}
-                >
-                  View Code <i class="fa-brands fa-github ms-2"></i>
-                </a>
+                {url.weburl != "#" ? (
+                  <a className="project-link" href={url.weburl} target="_blank">
+                    Visit Website{" "}
+                    <ArrowRightCircle size={25} className="ms-1" />
+                  </a>
+                ) : (
+                  ""
+                )}
+                {url.githuburl != "#" ? (
+                  <a
+                    className="project-link"
+                    href={url.githuburl}
+                    target="_blank"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    View Code <i class="fa-brands fa-github ms-2"></i>
+                  </a>
+                ) : (
+                  ""
+                )}
               </div>
             );
           })}
