@@ -16,16 +16,32 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="https://www.instagram.com/rawaa_mhmd/">
+              <a
+                href="https://www.instagram.com/rawaa_mhmd/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={instagram} alt="Icon" />
               </a>
-              <a href="https://github.com/rawaabaessa">
+              <a
+                href="https://github.com/rawaabaessa"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={github} alt="Icon" />
               </a>
-              <a href="https://www.linkedin.com/in/rawaa-baessa-28a658274/">
+              <a
+                href="https://www.linkedin.com/in/rawaa-baessa-28a658274/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={linkedin} alt="Icon" />
               </a>
-              <a href="https://wa.me/967739665833">
+              <a
+                href="https://wa.me/967739665833"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={whatsup} alt="Icon" />
               </a>
               {/* <a href="#">
