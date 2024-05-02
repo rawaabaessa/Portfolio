@@ -1,20 +1,25 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/coworking-woman-working-with-analytics-interface.png";
+import bnr from "../assets/img/coworking-woman-working-with-analytics-interface.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
+import { ArrowLeftCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { useTranslation } from "react-i18next";
+import cookies from "js-cookie";
 
 export const Banner = () => {
-  const CVFileURL = "http://rawaaba.netlify.app/CV.pdf";
+  const { t } = useTranslation();
+  const currentLang = cookies.get("i18next") || "en";
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = [t("Web Developer"), t("Web Designer")];
   const period = 2000;
-  //console.log(index);
+
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
@@ -51,17 +56,20 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-
-  function DownloadMyCv(CVFileURL) {
-    const fileName = CVFileURL.split("/").pop();
-    const aTag = document.createElement("a");
-    aTag.href = CVFileURL;
-    aTag.setAttribute("download", fileName);
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
+  function onMouseOverStyle() {
+    currentLang === "ar"
+      ? (document.querySelector(".banner button svg").style.margin =
+          "0 25px 0 0")
+      : (document.querySelector(".banner button svg").style.margin =
+          "0 0 0 25px");
   }
-
+  function onMouseLeaveStyle() {
+    currentLang === "ar"
+      ? (document.querySelector(".banner button svg").style.margin =
+          "0 10px 0 0")
+      : (document.querySelector(".banner button svg").style.margin =
+          "0 0 0 10px");
+  }
   return (
     <section className="banner" id="home">
       <Container>
@@ -74,29 +82,31 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">
+                    {t("Welcome to my Portfolio")}
+                  </span>
                   <h1>
-                    {`Hi! I'm Rawaa`} <br></br>
+                    {t(`Hi! I'm Rawaa`)} <br></br>
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      data-rotate='[ "Web Developer", "Web Designer"]'
                     >
-                      <span className="wrap">{text}</span>
+                      <h2 className="wrap">{text}</h2>
                     </span>
                   </h1>
 
                   <button
-                    onClick={() => {
-                      //DownloadMyCv(CVFileURL);
-                    }}
+                    onMouseOver={onMouseOverStyle}
+                    onMouseLeave={onMouseLeaveStyle}
                   >
-                    <a
-                      href="CV.pdf"
-                      download
-                      style={{ color: "white", textDecoration: "none" }}
-                    >
-                      Download My Cv <ArrowRightCircle size={25} />
+                    <a href="CV.pdf" download className="download">
+                      {t("Download My Cv")}{" "}
+                      {currentLang === "ar" ? (
+                        <ArrowLeftCircle size={25} />
+                      ) : (
+                        <ArrowRightCircle size={25} />
+                      )}
                     </a>
                   </button>
                 </div>

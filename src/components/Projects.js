@@ -1,4 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { ProjectCard } from "./ProjectCard";
 import { projects } from "../projects";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -6,6 +7,8 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="project" id="projects">
       <Container>
@@ -18,7 +21,7 @@ export const Projects = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Projects</h2>
+                  <h2 className="margin-btm">{t("My Projects")}</h2>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
@@ -26,13 +29,13 @@ export const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">All</Nav.Link>
+                        <Nav.Link eventKey="first">{t("All")}</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Web</Nav.Link>
+                        <Nav.Link eventKey="second">{t("Web")}</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Ui / Ux</Nav.Link>
+                        <Nav.Link eventKey="third">{t("Ui / Ux")}</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content

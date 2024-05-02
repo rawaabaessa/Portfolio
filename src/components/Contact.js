@@ -1,11 +1,15 @@
 import { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/coworking-signing-and-stamping-contract-agreement.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import emailjs from "@emailjs/browser";
+import cookies from "js-cookie";
 
 export const Contact = () => {
+  const { t } = useTranslation();
+  const currentLang = cookies.get("i18next") || "en";
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -95,7 +99,7 @@ export const Contact = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Get In Touch</h2>
+                  <h2 style={{ color: "white" }}>{t("Get In Touch")}</h2>
                   <form ref={form} onSubmit={sendEmail}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
@@ -103,7 +107,7 @@ export const Contact = () => {
                           type="text"
                           name="firstName"
                           value={formDetails.firstName}
-                          placeholder="First Name"
+                          placeholder={t("First Name")}
                           onChange={(e) =>
                             onFormUpdate("firstName", e.target.value)
                           }
@@ -114,7 +118,7 @@ export const Contact = () => {
                           type="text"
                           name="lastName"
                           value={formDetails.lasttName}
-                          placeholder="Last Name"
+                          placeholder={t("Last Name")}
                           onChange={(e) =>
                             onFormUpdate("lastName", e.target.value)
                           }
@@ -125,7 +129,7 @@ export const Contact = () => {
                           type="email"
                           name="email"
                           value={formDetails.email}
-                          placeholder="Email Address"
+                          placeholder={t("Email Address")}
                           onChange={(e) =>
                             onFormUpdate("email", e.target.value)
                           }
@@ -133,10 +137,11 @@ export const Contact = () => {
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
+                          dir={currentLang === "en" ? "ltr" : "rtl"}
                           type="tel"
                           name="tel"
                           value={formDetails.phone}
-                          placeholder="Phone No."
+                          placeholder={t("Phone No.")}
                           onChange={(e) =>
                             onFormUpdate("phone", e.target.value)
                           }
@@ -147,7 +152,7 @@ export const Contact = () => {
                           rows="6"
                           name="message"
                           value={formDetails.message}
-                          placeholder="Message"
+                          placeholder={t("Message")}
                           onChange={(e) =>
                             onFormUpdate("message", e.target.value)
                           }
@@ -160,13 +165,13 @@ export const Contact = () => {
                                   status.success === false ? "danger" : "white"
                                 }
                               >
-                                {status.message}
+                                {t(status.message)}
                               </p>
                             </Col>
                           </Row>
                         )}
                         <button type="submit">
-                          <span>{buttonText}</span>
+                          <span>{t(buttonText)}</span>
                         </button>
                       </Col>
                     </Row>

@@ -1,7 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
+  const { t } = useTranslation();
   const skills = [
     { id: 1, name: "fa-brands fa-html5", title: "HTML5" },
     { id: 2, name: "fa-brands fa-css3-alt", title: "CSS" },
@@ -32,7 +34,7 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
+              <h2 className="margin-btm">{t("My Skills")}</h2>
               <Container>
                 <Row className="g-5">{skillsList}</Row>
               </Container>

@@ -1,13 +1,19 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/portfolioLogo.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import { ChangeLanguage } from "./ChangeLanguage";
+import { Mode } from "./Mode";
+import logoDark from "../assets/img/portfolioLogo.svg";
+import logoLight from "../assets/img/portfolioLogo-light.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import cookies from "js-cookie";
 
 export const NavBar = () => {
+  const { t } = useTranslation();
+  const currentLang = cookies.get("i18next") || "en";
+  const mode = cookies.get("mode") || "dark";
+  const [theme, setTheme] = useState(mode);
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -24,7 +30,13 @@ export const NavBar = () => {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("#footer-img").src = "portfolioLogo.svg";
+    } else {
+      document.querySelector("#footer-img").src = "portfolioLogo-light.svg";
+    }
+  }, [theme]);
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
@@ -34,13 +46,19 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+            <img src={theme === "dark" ? logoDark : logoLight} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+          <Navbar.Collapse
+            className={currentLang === "en" ? "align-items-baseline" : ""}
+            id="basic-navbar-nav"
+          >
+            <Nav
+              className={currentLang === "ar" ? "ms-auto" : "me-auto"}
+              id="navbar"
+            >
               <Nav.Link
                 href="#home"
                 className={
@@ -48,7 +66,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("home")}
               >
-                Home
+                {t("Home")}
               </Nav.Link>
               <Nav.Link
                 href="#about"
@@ -57,7 +75,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("about")}
               >
-                About
+                {t("About Me")}
               </Nav.Link>
               <Nav.Link
                 href="#skills"
@@ -66,7 +84,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("skills")}
               >
-                Skills
+                {t("My Skills")}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -77,13 +95,26 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-                Projects
+                {t("My Projects")}
               </Nav.Link>
+              <Nav.Link href="#"></Nav.Link>
             </Nav>
-            <span className="navbar-text">
+            <span className="navbar-text gap-3">
+              <div
+                style={{
+                  margin: currentLang === "ar" ? "0 10px 0 0" : "0 0 0 10px",
+                  display: "flex",
+                  gap: "15px",
+                  // padding: "0px",
+                }}
+              >
+                <ChangeLanguage theme={theme} />
+                <Mode theme={theme} setTheme={setTheme} />
+              </div>
+
               <HashLink to="#connect">
                 <button className="vvd">
-                  <span>Let’s Connect</span>
+                  <span>{t("Let’s Connect")}</span>
                 </button>
               </HashLink>
             </span>

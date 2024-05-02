@@ -1,14 +1,12 @@
 import { Col, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { ArrowRightCircle } from "react-bootstrap-icons";
+import { ArrowLeftCircle } from "react-bootstrap-icons";
+import cookies from "js-cookie";
 
-export const ProjectCard = ({
-  title,
-  description,
-  imgUrl,
-  urls,
-  skills,
-  fullImage,
-}) => {
+export const ProjectCard = ({ title, imgUrl, urls, skills, fullImage }) => {
+  const { t } = useTranslation();
+  const currentLang = cookies.get("i18next") || "en";
   return (
     <Col size={12} sm={6} md={6}>
       <div className="proj-imgbx">
@@ -19,7 +17,7 @@ export const ProjectCard = ({
             target="_blank"
             style={{ color: "white", textDecoration: "none" }}
           >
-            <h4 className={"mb-3"}>{title}</h4>
+            <h4 className={"mb-3"}>{t(title)}</h4>
           </a>
 
           {/* <span>{description}</span> */}
@@ -48,8 +46,12 @@ export const ProjectCard = ({
                     rel="noreferrer"
                     target="_blank"
                   >
-                    Visit Website{" "}
-                    <ArrowRightCircle className="ms-1 arrow" size={25} />
+                    {t("Visit Website")}
+                    {currentLang === "ar" ? (
+                      <ArrowLeftCircle className="me-2 arrow" size={25} />
+                    ) : (
+                      <ArrowRightCircle className="ms-2 arrow" size={25} />
+                    )}
                   </a>
                 ) : (
                   ""
@@ -62,7 +64,16 @@ export const ProjectCard = ({
                     rel="noreferrer"
                     style={{ display: "flex", alignItems: "center" }}
                   >
-                    View Code <i class="fa-brands fa-github ms-2"></i>
+                    {t("View Code")}{" "}
+                    <i
+                      class="fa-brands fa-github"
+                      style={{
+                        margin:
+                          currentLang === "ar"
+                            ? "0 0.5rem 0 0"
+                            : "0 0 0 0.5rem",
+                      }}
+                    ></i>
                   </a>
                 ) : (
                   ""
