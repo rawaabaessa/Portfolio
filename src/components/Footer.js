@@ -1,17 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
-import logoDark from "../assets/img/portfolioLogo.svg";
-import logoLight from "../assets/img/portfolioLogo-light.svg";
-import instagram from "../assets/img/Platform=Instagram, Color=Negative.svg";
-import linkedin from "../assets/img/Platform=LinkedIn, Color=Negative.svg";
-import github from "../assets/img/Platform=Github, Color=Negative.svg";
-import whatsup from "../assets/img/Platform=WhatsApp, Color=Negative.svg";
 
 export const Footer = ({ theme }) => {
   return (
     <footer className="footer">
       <Container>
         <Row className="align-items-center pt-5">
-          <Col size={12} sm={6}>
+          <Col size={12} sm={6} className="logo">
             {/* <div className="footer-img"></div> */}
             <img src={"portfolioLogo.svg"} alt="Logo" id="footer-img" />
           </Col>

@@ -53,9 +53,7 @@
   --font-color: #333333;
   --about-font: #4c4c4c;
 }
-[dir="rtl"] {
-  --align-footer: left;
-}
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -71,7 +69,7 @@ html {
 
 body {
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   position: relative;
   background-color: var(--seconed-color) !important;
   color: var(--main-color) !important;
@@ -313,7 +311,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 20px;
   display: block;
 }
@@ -528,6 +526,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* color: #151515 !important; */
   border: 1px solid var(--border-color);
   border-radius: 0 55px 55px 0;
+  text-overflow: ellipsis;
 }
 .proj-imgbx {
   position: relative;
@@ -715,10 +714,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer {
   padding: 0 0 50px 0;
   background-color: var(--seconed-color);
-  /* background-image: url("./assets/img/footer-bg.png"); */
-  /* background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 .footer img {
@@ -798,5 +793,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 767px) {
   .contact img {
     width: 100%;
+  }
+  .logo {
+    text-align: center;
   }
 }
