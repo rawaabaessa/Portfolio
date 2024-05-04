@@ -21,7 +21,7 @@ export const Projects = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2 className="margin-btm">{t("My Projects")}</h2>
+                  <h2 className="margin-btm">{t("Projects")}</h2>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"

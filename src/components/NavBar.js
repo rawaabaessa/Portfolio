@@ -84,7 +84,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("skills")}
               >
-                {t("My Skills")}
+                {t("Skills")}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -95,7 +95,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-                {t("My Projects")}
+                {t("Projects")}
               </Nav.Link>
               <Nav.Link href="#"></Nav.Link>
             </Nav>

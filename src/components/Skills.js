@@ -34,7 +34,7 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2 className="margin-btm">{t("My Skills")}</h2>
+              <h2 className="margin-btm">{t("Skills")}</h2>
               <Container>
                 <Row className="g-5">{skillsList}</Row>
               </Container>
