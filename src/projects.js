@@ -5,14 +5,30 @@ import projImg4 from "./assets/img/Frame 5.svg";
 import projImg5 from "./assets/img/Frame 6.svg";
 import projImg6 from "./assets/img/Frame 7.svg";
 import projImg7 from "./assets/img/Frame 3.svg";
+import projImg8 from "./assets/img/Frame 10.svg";
 import qaah from "./assets/img/qaah.png";
 import vegan from "./assets/img/veganlife.png";
 import foodi from "./assets/img/foodi.png";
 import sonrisa from "./assets/img/sonrisa.png";
 import porfolio from "./assets/img/porfolio.png";
 import todolist from "./assets/img/todolist.png";
+import mahami from "./assets/img/mahami.png";
 
 export const projects = [
+  {
+    title: "Mahami",
+    category: "web",
+    imgUrl: projImg8,
+    fullImage: mahami,
+    urls: [
+      {
+        id: 1,
+        weburl: "https://mahammi.netlify.app/",
+        githuburl: "https://github.com/rawaabaessa/mahami-Reactjs",
+      },
+    ],
+    skills: [{ id: 4, name: "fa-brands fa-react", title: "React js" }],
+  },
   {
     title: "Nafas App",
     category: "ui/ux",
