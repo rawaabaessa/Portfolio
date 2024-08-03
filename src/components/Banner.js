@@ -99,7 +99,7 @@ export const Banner = () => {
                     onMouseOver={onMouseOverStyle}
                     onMouseLeave={onMouseLeaveStyle}
                   >
-                    <a href="CV.pdf" download className="download">
+                    <a href="Rawaa Baessa CV.pdf" download className="download">
                       {t("Download My Cv")}{" "}
                       {currentLang === "ar" ? (
                         <ArrowLeftCircle size={25} />
