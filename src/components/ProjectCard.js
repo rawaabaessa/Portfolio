@@ -10,7 +10,7 @@ export const ProjectCard = ({ title, imgUrl, urls, skills, fullImage }) => {
   return (
     <Col size={12} sm={6} md={6}>
       <div className="proj-imgbx">
-        <img src={imgUrl} alt="" className="project-image" />
+        <img src={imgUrl} loading="lazy" alt="" className="project-image" />
         <div className="proj-txtx">
           <a
             href={fullImage}

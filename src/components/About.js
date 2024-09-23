@@ -25,7 +25,12 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+      <img
+        className="background-image-left"
+        src={colorSharp}
+        loading="lazy"
+        alt="Image"
+      />
     </section>
   );
 };

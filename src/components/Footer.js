@@ -6,8 +6,12 @@ export const Footer = ({ theme }) => {
       <Container>
         <Row className="align-items-center pt-5">
           <Col size={12} sm={6} className="logo">
-            {/* <div className="footer-img"></div> */}
-            <img src={"portfolioLogo.svg"} alt="Logo" id="footer-img" />
+            <img
+              src={"portfolioLogo.svg"}
+              loading="lazy"
+              alt="Logo"
+              id="footer-img"
+            />
           </Col>
           <Col
             size={12}

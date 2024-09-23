@@ -86,6 +86,7 @@ export const Contact = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                   src={contactImg}
+                  loading="lazy"
                   alt="Contact Us"
                 />
               )}

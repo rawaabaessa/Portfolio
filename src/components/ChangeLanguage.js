@@ -15,7 +15,6 @@ export const ChangeLanguage = ({ theme }) => {
       document.querySelector(
         ".nav-link#projects-tabs-tab-third"
       ).style.borderRadius = "55px 0 0 55px";
-      // document.querySelector(".project-link i").style.margin = "0 0.5rem 0 0";
       document.querySelector(".banner button svg").style.margin = "0 10px 0 0";
       document.querySelector("#social-icons").classList.remove("text-sm-end");
       document.querySelector("#social-icons").classList.add("text-sm-start");
@@ -29,7 +28,6 @@ export const ChangeLanguage = ({ theme }) => {
       document.querySelector(
         ".nav-link#projects-tabs-tab-third"
       ).style.borderRadius = "0 55px 55px 0";
-      // document.querySelector(".project-link i").style.margin = "0 0 0 0.5rem";
       document.querySelector(".banner button svg").style.margin = "0 0 0 10px";
       document.querySelector("#social-icons").classList.add("text-sm-end");
       document.querySelector("#social-icons").classList.remove("text-sm-start");
