@@ -28,7 +28,7 @@ Live Demo: [Click here to visit](https://rawaaba.netlify.app/)
 ---
 
 ## 📸 Screenshots
-
+![project screenshot](./src/assets/img/screenshot/portfolio-full-screen.png)
 
 
 
