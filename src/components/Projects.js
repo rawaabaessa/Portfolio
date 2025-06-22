@@ -5,6 +5,7 @@ import { projects } from "../projects";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { v4 as uuid } from "uuid";
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -46,16 +47,16 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
+                          {projects.map((project) => {
+                            return <ProjectCard key={uuid()} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <Row>
-                          {projects.map((project, index) => {
+                          {projects.map((project) => {
                             return project.category === "web" ? (
-                              <ProjectCard key={index} {...project} />
+                              <ProjectCard key={uuid()} {...project} />
                             ) : (
                               ""
                             );
@@ -63,9 +64,9 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        {projects.map((project, index) => {
+                        {projects.map((project) => {
                           return project.category === "ui/ux" ? (
-                            <ProjectCard key={index} {...project} />
+                            <ProjectCard key={uuid()} {...project} />
                           ) : (
                             ""
                           );
@@ -83,7 +84,7 @@ export const Projects = () => {
         className="background-image-right"
         src={colorSharp2}
         loading="lazy"
-        alt=""
+        alt="backgroundRight"
       ></img>
     </section>
   );

@@ -21,22 +21,18 @@ export const Footer = ({ theme }) => {
           >
             <div className="social-icon">
               <a href="https://www.instagram.com/rawaa_mhmd/" target="_blank">
-                {/*  <img src={instagram} alt="Icon" /> */}
                 <i class="fa-brands fa-instagram"></i>
               </a>
               <a href="https://github.com/rawaabaessa" target="_blank">
-                {/* <img src={github} alt="Icon" /> */}
                 <i class="fa-brands fa-github"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/rawaa-baessa-28a658274/"
                 target="_blank"
               >
-                {/* <img src={linkedin} alt="Icon" /> */}
                 <i class="fa-brands fa-linkedin"></i>
               </a>
               <a href="https://wa.me/967739665833" target="_blank">
-                {/* <img src={whatsup} alt="Icon" /> */}
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
             </div>

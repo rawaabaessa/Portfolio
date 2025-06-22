@@ -13,17 +13,13 @@ export const Skills = () => {
     { id: 6, name: "fa-brands fa-react", title: "React js" },
     { id: 7, name: "fa-brands fa-git-alt", title: "Git" },
     { id: 8, name: "fa-brands fa-php", title: "PHP" },
-    { id: 9, name: "fa-brands fa-figma", title: "Figma" },
+    // { id: 9, name: "fa-brands fa-figma", title: "Figma" },
     { id: 10, name: "fa-solid fa-database", title: "MySql" },
   ];
   const skillsList = skills.map((skill) => {
     return (
-      <Col xs={12} sm={4} md={3}>
-        <i
-          key={skill.id}
-          title={skill.title}
-          className={`skill-icon ${skill.name}`}
-        ></i>{" "}
+      <Col xs={12} sm={4} md={3} key={skill.id}>
+        <i title={skill.title} className={`skill-icon ${skill.name}`}></i>{" "}
       </Col>
     );
   });
@@ -46,7 +42,7 @@ export const Skills = () => {
         className="background-image-left"
         src={colorSharp}
         loading="lazy"
-        alt="Image"
+        alt="backgroundLeft"
       />
     </section>
   );
